@@ -1,6 +1,7 @@
 package radium.example.travis;
 
 import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -11,12 +12,15 @@ import static org.junit.Assert.*;
 
 public class HandlebarsTest {
     
+    private String expectedHTML;
+    
     public HandlebarsTest() {
+        super();
     }
     
     @Before
-    public void setUp() {
-    
+    public void setUp() throws IOException {
+        expectedHTML = Resources.toString(Resources.getResource("testHandlebars.html"), Charsets.UTF_8);
     }
     
     @After
@@ -36,7 +40,6 @@ public class HandlebarsTest {
         System.setOut(oldSystemOutput);
         
         String text = new String(outputStream.toByteArray(), Charsets.UTF_8);
-        System.out.println("text = ");
-        assertEquals(text.trim(), "<ul><li>Hello</li><li>World</li><li>!</li></ul>");
+        assertEquals(text.trim(), expectedHTML);
     }
 }
