@@ -38,7 +38,7 @@ public class TryHandlebar {
             code = Code.FAILURE;
         }
         
-        exit(code);
+        //exit(code);
     }
     
     public static void exit(int code) {
