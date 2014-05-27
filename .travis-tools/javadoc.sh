@@ -1,10 +1,4 @@
 #!/bin/bash
-echo "$TRAVIS_REPO_SLUG"
-echo "$TRAVIS_JDK_VERSION"
-echo "$TRAVIS_PULL_REQUEST"
-echo "$TRAVIS_BRANCH"
-echo "${GH_PAGES}"
-
 if [ "$TRAVIS_REPO_SLUG" == "radium226/example-travis" ] && [ "$TRAVIS_JDK_VERSION" == "oraclejdk7" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
 echo -e "Publishing javadoc...\n"
