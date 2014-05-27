@@ -21,6 +21,10 @@ public class TryHandlebar {
     
     final public static String TEMPLATE = "Template.handlebars";
     
+    /**
+     * Main program to run
+     * @param arguments Arguments. 
+     */
     public static void main(String[] arguments) {
         int code;
         try {
