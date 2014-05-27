@@ -1,3 +1,8 @@
 language: java
 jdk: oraclejdk7
+env:
+  global:
+    secure: "ZEcdJHVA6PWdJxbrd9aW5i7bRxIFXol735RLtU5wvtvH8IekZXe9o03GPu3qHff6qF1KQwQDA3dyS+d6AIYblTiuJZy2fmQbNinn4IOFewLjenZ3PGVDG8gRe+fqBGRv9pVciwdZ8uKHhWo7t3Wlr1ucQ/442QDWhSAvKbzM+wM="
 
+after_success:
+  - .travis-tools/javadoc.sh
