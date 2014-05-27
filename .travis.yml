@@ -2,7 +2,6 @@ language: java
 jdk: oraclejdk7
 env:
   global:
-    secure: "ZEcdJHVA6PWdJxbrd9aW5i7bRxIFXol735RLtU5wvtvH8IekZXe9o03GPu3qHff6qF1KQwQDA3dyS+d6AIYblTiuJZy2fmQbNinn4IOFewLjenZ3PGVDG8gRe+fqBGRv9pVciwdZ8uKHhWo7t3Wlr1ucQ/442QDWhSAvKbzM+wM="
-
+    secure: "LwfuqPbxvBZfeAZvq6VdaBo/43N1rkW7yK1sCOF7EFpT42WB6WPll/ppeCaIIjB56kEzbL7WLGc01z/gZj3yjj0ovDtUX2AqURxQUJIrz0ApOlz9wNqjpI/m3xJ4bLpgNL7iNAPru6z/JjA5YlNfAxWOVym1+luiUbjieS6B8cg="
 after_success:
   - .travis-tools/javadoc.sh
