@@ -8,7 +8,7 @@ if [ "$TRAVIS_REPO_SLUG" == "radium226/example-travis" ] && [ "$TRAVIS_JDK_VERSI
 
 echo -e "Publishing javadoc...\n"
 
-  cp -R build/apidocs $HOME/javadoc
+  cp -R target/apidocs $HOME/javadoc
 
   cd $HOME
   git config --global user.email "travis@travis-ci.org"
