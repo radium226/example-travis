@@ -46,7 +46,7 @@ public class TryHandlebar {
     }
     
     public static void exit(int code) {
-        System.exit(code);
+        //System.exit(code);
     }
     
     public static List<String> getWords() {
