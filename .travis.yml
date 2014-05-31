@@ -2,6 +2,11 @@ language: java
 jdk: oraclejdk7
 env:
   global:
-    secure: "LwfuqPbxvBZfeAZvq6VdaBo/43N1rkW7yK1sCOF7EFpT42WB6WPll/ppeCaIIjB56kEzbL7WLGc01z/gZj3yjj0ovDtUX2AqURxQUJIrz0ApOlz9wNqjpI/m3xJ4bLpgNL7iNAPru6z/JjA5YlNfAxWOVym1+luiUbjieS6B8cg="
+    secure: LwfuqPbxvBZfeAZvq6VdaBo/43N1rkW7yK1sCOF7EFpT42WB6WPll/ppeCaIIjB56kEzbL7WLGc01z/gZj3yjj0ovDtUX2AqURxQUJIrz0ApOlz9wNqjpI/m3xJ4bLpgNL7iNAPru6z/JjA5YlNfAxWOVym1+luiUbjieS6B8cg=
 after_success:
-  - .travis-tools/javadoc.sh
+- ".travis-tools/javadoc.sh"
+deploy:
+  provider: heroku
+  api_key:
+    secure: MACmMz3kocpjZPngE+eGqDMtquIv0tPWj5IRzVuGMgBVfxp+xbl2zhHsIB0sdskRlv3/BTbfYOiuy0qFGqT4PXijRAvhsDP2XYtesC/HuhxrpI63b+t4lttCQ6+ME5GU9COcqK/9Ty870o9JwSs2cBkCcH9daqR7SLn5t8P3F14=
+  app: radium226-example-travis
